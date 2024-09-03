@@ -1,0 +1,344 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Montserrat", "Fraunces";
+}
+
+/* Wrapper to center the card */
+.wrapper {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: hsl(30, 38%, 92%);
+  box-sizing: border-box;
+  padding-top: 30px;
+}
+
+/* Card styles */
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 100%;
+  max-width: 375px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+/* Image styling */
+img {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  max-height: 300px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+}
+
+img:hover {
+  transform: scale(0.9);
+}
+/* Card contents */
+.stack {
+  padding: 20px;
+  flex-grow: 1;
+  min-height: 300px;
+}
+
+.stack h2 {
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 0 0 10px 0;
+  color: hsl(228, 12%, 48%);
+  letter-spacing: 2px;
+}
+
+.stack h3 {
+  font-size: 2rem;
+  font-family: Fraunces;
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+
+.stack p {
+  font-size: 1rem;
+  color: hsl(228, 12%, 48%);
+  padding-bottom: 20px;
+}
+
+.stack .price {
+  font-size: 2rem;
+  color: hsl(158, 36%, 37%);
+  font-family: Fraunces;
+  font-weight: 700;
+  padding-left: 5px;
+}
+
+span {
+  font-size: 0.8rem;
+  color: hsl(228, 12%, 48%);
+  padding-left: 10px;
+  vertical-align: 50%;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: hsl(158, 36%, 37%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 50px;
+  font-size: 1rem;
+  transition: all 1s ease;
+}
+
+button:hover {
+  background: black;
+  color: white;
+  transform: scale(1);
+}
+
+button:focus {
+  background: black;
+  color: white;
+  border: 5px solid hsl(158, 36%, 37%);
+}
+
+.fa-solid fa-cart-shopping {
+  padding-right: 5px;
+}
+/* Desktop screen-size styling for screen sizes 900 and above */
+@media screen and (min-width: 900px) {
+  .card {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    height: 600px;
+  }
+
+  img {
+    max-width: 50%;
+    max-height: 100%;
+    border-radius: 8px 0 0 8px;
+    object-fit: cover;
+  }
+
+  .stack {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .stack h2 {
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 0 0 10px 0;
+    color: hsl(228, 12%, 48%);
+    font-size: 1rem;
+    letter-spacing: 12px;
+  }
+
+  .stack h3 {
+    font-size: 3.5rem;
+    font-family: Fraunces;
+    font-weight: 700;
+    padding-bottom: 20px;
+  }
+
+  .stack p {
+    font-size: 1.3rem;
+    color: hsl(228, 12%, 48%);
+    padding-bottom: 20px;
+  }
+
+  .stack .price {
+    font-size: 2.8rem;
+    color: hsl(158, 36%, 37%);
+    font-family: Fraunces;
+    font-weight: 700;
+    padding-left: 5px;
+  }
+
+  span {
+    font-size: 0.8rem;
+    color: hsl(228, 12%, 48%);
+    padding-left: 10px;
+    vertical-align: 50%;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 50px;
+    font-size: 1rem;
+    transition: all 1s ease;
+  }
+
+  button:hover {
+    background: black;
+    color: white;
+    transform: scale(1);
+  }
+
+  button:focus {
+    background: black;
+    color: white;
+    border: 5px solid hsl(158, 36%, 37%);
+  }
+
+  .fa-solid fa-cart-shopping {
+    padding-right: 5px;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  display: block;
+  margin-top: 100px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
